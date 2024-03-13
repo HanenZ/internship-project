@@ -1,0 +1,50 @@
+body {
+    background-image: url('bg.png');
+    font-family: Helvetica;
+    font-size: 15px;
+    margin: 0;
+}
+
+div.coffee {
+    background-image: url('bg_coffee.jpg');
+}
+
+div.section {
+    background-color: #FFFFFF;
+}
+
+.coffee, .section {
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+div#header {
+    text-align: center;
+    color: #375740;
+    background-color: #edfcf2;
+    text-transform: uppercase;
+}
+
+#locations {
+    text-align: center;
+}
+
+div.coffee span {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:link {
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: black;
+}
