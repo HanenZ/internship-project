@@ -1,14 +1,13 @@
-from pages.base_page import Page
-from pages.header import Header
-from pages.main_page import MainPage
-from pages.search_results_page import SearchResultsPage
-from pages.cart_page import CartPage
+from pages.reelly_sign_up_page import ReellySignUp
+from pages.reelly_sign_in_page import ReellyLogIn
+from pages.main_menu_page import MainMenu
+from pages.filters_page import Filters
+
 
 class Application:
 
     def __init__(self, driver):
-        self.page = Page(driver)
-        self.header = Header(driver)
-        self.main_page = MainPage(driver)
-        self.search_results_page = SearchResultsPage(driver)
-        self.cart_page = CartPage(driver)
+        self.reelly_sign_up_page = ReellySignUp(driver)
+        self.reelly_sign_in_page = ReellyLogIn(driver)
+        self.main_menu_page = MainMenu(driver)
+        self.filters_page = Filters(driver)
