@@ -11,6 +11,6 @@ class ReellyLogIn(Page):
 
     def Log_in(self):
         # self.driver.find_element(*self.EMAIL).send_keys('zoghlami_hanen@yahoo.fr')
-        self.input_text('EMAIL', *self.EMAIL)
-        self.driver.find_element(*self.PASSWORD).send_keys('PASSWORD')
+        self.input_text('email', *self.EMAIL)
+        self.driver.find_element(*self.PASSWORD).send_keys('password')
         self.driver.find_element(*self.CONTINUE_BUTTON).click()

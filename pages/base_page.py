@@ -1,10 +1,14 @@
 from selenium.webdriver import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Page:
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(self.driver, 10)
+
 
     def open(self, url):
         self.driver.get(url)
@@ -20,3 +24,14 @@ class Page:
 
     def input_text(self, text, *locator):
         self.driver.find_element(*locator).send_keys(text)
+
+    def switch_to_new_window(self):
+        self.wait.until(EC.new_window_is_opened)
+        all_windows = self.driver.window_handles  # [window1, window2]
+        self.driver.switch_to.window(all_windows[1])
+
+    def switch_to_window_by_id(self, window_id):
+        self.driver.switch_to.window(window_id)
+
+    def wait_for_element(self, *locator):
+        return self.wait.until(EC.presence_of_element_located(locator))

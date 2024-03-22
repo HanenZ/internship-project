@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver import Keys
 from time import sleep
 from pages.base_page import Page
@@ -11,7 +13,9 @@ class Filters(Page):
 
 
     def newly_Launch(self):
+        self.wait_for_element(*self.NEWLY_LAUNCHED)
         self.click(*self.NEWLY_LAUNCHED)
+
 
 
     def verif_newly_launch_tag(self):

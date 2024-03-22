@@ -8,5 +8,5 @@ class ReellySignUp(Page):
     SIGN_IN = (By.CSS_SELECTOR, "[class='sing-in-text']")
 
     def sign_up(self):
-        self.open('https://soft.reelly.io/sign-up')
-        self.click(*self.SIGN_IN)
+            self.open('https://soft.reelly.io/sign-up')
+            self.click(*self.SIGN_IN)

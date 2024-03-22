@@ -1,6 +1,6 @@
 Feature: Test Scenarios for filter functionality
 
-  Scenario: User can filter by sale status Newly Launch
+    Scenario: User can filter by sale status Newly Launch
     Given Open the reelly main page
     Then Log in to the page
     And Click on “off plan” at the left side menu
