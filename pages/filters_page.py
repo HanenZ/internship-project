@@ -9,14 +9,11 @@ from selenium.webdriver.common.by import By
 class Filters(Page):
     NEWLY_LAUNCHED = (By.CSS_SELECTOR, "div[wized='priorityStatusNewlyLaunched']")
     NEWLY_LAUNCHED_TAG = (By.CSS_SELECTOR, "[class*='commision_box']")
-    LISTINGS= (By.CSS_SELECTOR, "[class='project-image']")
-
+    LISTINGS = (By.CSS_SELECTOR, "[class='project-image']")
 
     def newly_Launch(self):
         self.wait_for_element(*self.NEWLY_LAUNCHED)
         self.click(*self.NEWLY_LAUNCHED)
-
-
 
     def verif_newly_launch_tag(self):
         self.driver.execute_script("window.scrollBy(0,2000)", "")

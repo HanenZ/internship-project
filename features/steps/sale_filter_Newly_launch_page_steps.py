@@ -7,6 +7,7 @@ from behave import given, then, when
 @given('Open the reelly main page')
 def open_reelly_sign_up_page(context):
     context.app.reelly_sign_up_page.sign_up()
+    sleep(2)
 
 
 @then('Log in to the page')

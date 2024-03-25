@@ -7,10 +7,11 @@ from selenium.webdriver.common.by import By
 class ReellyLogIn(Page):
     EMAIL = (By.CSS_SELECTOR, "[name='email-2']")
     PASSWORD = (By.CSS_SELECTOR, "[name='Password']")
-    CONTINUE_BUTTON = (By.CSS_SELECTOR, "[class*='login-button']")
+    CONTINUE_BUTTON = (By.CSS_SELECTOR, "[class*='login-button'][class*='w-button']")
 
     def Log_in(self):
         # self.driver.find_element(*self.EMAIL).send_keys('zoghlami_hanen@yahoo.fr')
-        self.input_text('email', *self.EMAIL)
-        self.driver.find_element(*self.PASSWORD).send_keys('password')
-        self.driver.find_element(*self.CONTINUE_BUTTON).click()
+        self.input_text('zoghlami_hanen@yahoofr', *self.EMAIL)
+        self.find_element(*self.PASSWORD).send_keys('Mayaadam2018..')
+        sleep(2)
+        self.click(*self.CONTINUE_BUTTON)
