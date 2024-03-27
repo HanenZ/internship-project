@@ -47,8 +47,8 @@ def browser_init(context, scenario_name):
     url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
     options = Options()
     bstack_options = {
-        'os': 'Windows',
-        'osVersion': '10',
+        'os': 'OS X',
+        'osVersion': 'Ventura',
         'browserName': 'Firefox',
 
         'sessionName': scenario_name
