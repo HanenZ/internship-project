@@ -1,5 +1,6 @@
 Feature: Test Scenarios for filter functionality
 
+    @smoke
     Scenario: User can filter by sale status Newly Launch
     Given Open the reelly main page
     Then Log in to the page
